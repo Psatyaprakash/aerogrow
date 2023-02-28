@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head><meta charset="utf-8">
+	<title>Product</title>
+	<link href="product.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="product-card"><img alt="" src="" style=" border-radius: 50px;" />
+<h1>Aloevera</h1>
+
+<p>Medicinal plant</p>
+
+<div class="product-pic" style="background-image: url(aleovera.webp); border-radius: 10px;"></div>
+
+<div class="product-colors" style=" margin-top: 10%;"></div>
+
+<div class="product-info">
+<div class="product-price"></div>
+<a class="product-button" href="index.html">HOME</a></div>
+</div>
+<script>
+      $(".product-colors span").click(function(){
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $("body").css("background",$(this).attr("data-color"));
+        $(".product-price").css("color",$(this).attr("data-color"));
+        $(".product-button").css("color",$(this).attr("data-color"));
+        $(".product-pic").css("background-image",$(this).attr("data-pic"));
+      });
+    </script></body>
+</html>
